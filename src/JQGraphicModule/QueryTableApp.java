@@ -182,16 +182,31 @@ public class QueryTableApp extends javax.swing.JFrame {
                 chart = new JFreeChart(plot);
                 chart.setTitle("Line chart");
             } else{
-                JOptionPane.showMessageDialog(this,"");
+                JOptionPane.showMessageDialog(this,"You should fill the table with data");
             }
             
         } else  {
             if (b.isSelected()){
             // bar chart
+            DefaultCategoryDataset data = new DefaultCategoryDataset();
+            // TODO: finish the bar chart
             } else {
           // pir chart
-            }
+            }// end else
         }
+        panel = new ChartPanel(chart);
+        panel.setBounds(5,10,410,350);
+        if (l.isSelected()){
+            lineas.add(panel);
+            lineas.repaint();
+        } else {
+            if (b.isSelected())
+            {
+                //bar chart
+            } //end if
+            else{ // pie chart
+            } // end else
+        }//end else
     }                                        
     
     
