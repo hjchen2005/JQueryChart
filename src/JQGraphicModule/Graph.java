@@ -2,6 +2,7 @@ import javax.swing.JFrame;
 import org.jfree.data.jdbc.JDBCCategoryDataset;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
 
 public class Graph extend JFrame{
   public Graph{
@@ -13,7 +14,7 @@ public class Graph extend JFrame{
     
     JFreeChart chart = ChartFactory.createBarChart(
       "Graph","","",dataSet,PlotOrientation.VERTICAL,true,true,false);
-    )
+    this.add(new ChartPanel(chart));
     this.pack();
   }
 }
