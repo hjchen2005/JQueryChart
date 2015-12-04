@@ -37,6 +37,21 @@ public class Graph2 extends JFrame {
     p.setSelected(false);
   }
   
+  // right click Graphicate JButton -> event-> action -> action performed
+  private void jButton1ActionPerformed(ActionEvent evt){
+    ChartPanel panel;
+    JFreeChart chart = null;
+    if (l.isSelected){
+      // linear chart
+    } else  {
+        if (b.isSelected()){
+          // bar chart
+        } else {
+          // pir chart
+        }
+    }
+  }
+  
   private JRadioButton b;
   private JPanel barras;
   private JLayeredPane capas;
