@@ -176,6 +176,15 @@ public class QueryTableApp extends javax.swing.JFrame {
                 System.out.println("Cannot create data series for line graph");
             }// end catch
             
+            if (validar ==1){
+                dataset.addSeries(serie);
+                plot = new XYPlot(dataset,x,y,rederer);
+                chart = new JFreeChart(plot);
+                chart.setTitle("Line chart");
+            } else{
+                JOptionPane.showMessageDialog(this,"");
+            }
+            
         } else  {
             if (b.isSelected()){
             // bar chart
