@@ -1,3 +1,5 @@
+package JQGraphicModule;
+
 import javax.swing.JFrame;
 import org.jfree.data.jdbc.JDBCCategoryDataset;
 import org.jfree.chart.JFreeChart;
