@@ -7,7 +7,11 @@ package JQGraphicModule;
 import javax.swing.*;
 import org.jfree.chart.*;
 import org.jfree.data.*;
+import org.jfree.chart.renderer.xy.XYSplineRenderer;
+import org.jfree.data.xy.XYSeriesCollection;
+import org.jfree.data.xy.XYSeries;
 import java.awt.event.*;
+import org.jfree.chart.plot.XYPlot;
 /**
  *
  * @author hjchen
@@ -151,6 +155,26 @@ public class QueryTableApp extends javax.swing.JFrame {
         JFreeChart chart = null;
         if (l.isSelected()){
             // linear chart
+            int validar=1;
+            XYSplineRenderer renderer = new XYSplineRenderer();
+            XYSeriesCollection dataset = new XYSeriesCollection();
+            
+            XYSeries serie = new XYSeries("Data");
+            
+            XYPlot plot;
+            lineas.removeAll();
+            
+            try{
+                for(int f=0;f<6;f++){
+                    serie.add(
+                        Float.parseFloat(String.valueOf(datos.getValueAt(f,0))),
+                        Float.parseFloat(String.valueOf(datos.getValueAt(f, 1)))
+                    );
+                }
+            }catch (Exception e){
+                validar=0;
+                System.out.println("Cannot create data series for line graph");
+            }// end catch
             
         } else  {
             if (b.isSelected()){
