@@ -18,7 +18,23 @@ public class Graph2 extends JFrame {
   // right click to the radio button Lineas -> event -> action -> action performed
   private void lActionPerformed(ActionEvent evt){
     lineas.setVisible(true);
-    
+    capas.setLayer(lineas,0,0);
+    b.setSelected(false);
+    p.setSelected(false);
+  }
+  
+  private void bActionPerformed(ActionEvent evt){
+    barras.setVisible(true);
+    capas.setLayer(barras,0,0);
+    b.setSelected(false);
+    p.setSelected(false);
+  }
+  
+  private void pActionPerformed(ActionEvent evt){
+    pastel.setVisible(true);
+    capas.setLayer(pastel,0,0);
+    b.setSelected(false);
+    p.setSelected(false);
   }
   
   private JRadioButton b;
