@@ -1,4 +1,5 @@
 // Layouts of the query table
+// Graphicos de Lineas Barras y Pastel en Java con interfaz grafica
 package JQGraphicModule;
 import javax.swing.*;
 import org.jfree.chart.*;
